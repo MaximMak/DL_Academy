@@ -80,12 +80,15 @@ print("Максимальная цифра во введенном числе : 
 # Через while.
 a = int(input())
 m = a%10
-a = a//10
-while a > 0:
-    if a%10 > m:
-        m = a%10
+if m == 9:
+    print(m)
+else:
     a = a//10
-print(m)
+    while a > 0:
+        if a % 10 > m:
+            m = a % 10
+        a = a // 10
+    print(m)
 
 # Через for
 lst = int(input())
