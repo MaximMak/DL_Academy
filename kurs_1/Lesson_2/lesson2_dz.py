@@ -5,7 +5,7 @@ import math
 # иначе "Извините, пользоваться данным ресурсом можно только с 18 лет"
 
 age = int(input('Please input your age: '))
-if age < 0:
+if age <= 0:
     print("You are entering the wrong age. It cannot be less than 0.")
 elif 0 < age < 18:
     print("Извините, пользоваться данным ресурсом можно только с 18 лет")
@@ -48,7 +48,7 @@ elif input_data == 2:
 # Second way:
 while True:
     input_data = input('Четные или Нечетные?')
-    if not input_data == input_data.lower() in ['четные', 'Четные']:
+    if not input_data == input_data.lower() in ['четные', 'Четные', 'нечетные', 'Нечетные']:
         print('Я не понимаю, что вы от меня хотите... Попробуйте снова: ')
     else:
         print(f'Ура! ты выбрал {input_data}')
