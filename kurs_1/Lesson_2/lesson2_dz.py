@@ -72,6 +72,26 @@ else:
 # * постарайтесь решить задачу с применением арифметики и цикла while;
 # * при желании и понимании решите задачу с применением цикла for.
 
+# Через встроенную функцию max.
 x = input('Введите произвольное целое число: ')
 list_of_digits = list(map(int, str(x)))
 print("Максимальная цифра во введенном числе : ", max(list_of_digits))
+
+# Через while.
+a = int(input())
+m = a%10
+a = a//10
+while a > 0:
+    if a%10 > m:
+        m = a%10
+    a = a//10
+print(m)
+
+# Через for
+lst = int(input())
+lst = list(map(int, str(lst)))
+max = lst[0]
+for i in lst:
+    if i > max:
+        max = i
+print(max)
