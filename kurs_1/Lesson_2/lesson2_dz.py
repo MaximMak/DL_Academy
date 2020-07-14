@@ -3,6 +3,7 @@ import math
 # Задача-1: Запросите у пользователя его возраст.
 # Если ему есть 18 лет, выведите: "Доступ разрешен",
 # иначе "Извините, пользоваться данным ресурсом можно только с 18 лет"
+from pip._vendor.distlib.compat import raw_input
 
 age = int(input('Please input your age: '))
 if age <= 0:
@@ -98,3 +99,14 @@ for i in lst:
     if i > max:
         max = i
 print(max)
+
+
+startNumber = int(input("Enter the start number here "))
+endNumber = int(input("Enter the end number here "))
+
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-2) + fib(n-1)
+cord = list(range(startNumber, endNumber))
+print(cord)
