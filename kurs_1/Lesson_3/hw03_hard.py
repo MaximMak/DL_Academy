@@ -77,19 +77,28 @@ else:
 #
 # Вход: 11
 # Выход: 5 3
-inp_room = input('Введите номер комнаты: ')
-flor
-N = range(2000000000)
-while N > 0:
-    for current_floor in range(floor):
-     answer_floor += 1
-    for current_room in range(room):
-        N -= 1
-    if N == 0:
-        answer_room = current_room + 1
-    break
-    if N == 0:
-     break
-floor += 1
-room += 1
-print(answer_floor, answer_room)
+room_number = int(input('Введите номер комнаты в числовом вформате: '))
+block_number = 0
+position = 1
+floor = 1
+
+while (position + (block_number * block_number)) <= room_number:
+    position += (block_number * block_number)
+    floor += block_number
+    block_number += 1
+
+
+one_floor = 1
+while (position + (one_floor * block_number)) <= room_number:
+    position += one_floor * block_number
+    one_floor += 1
+floor += one_floor - 1
+
+
+place = 1
+while (position + place) <= room_number:
+    place += 1
+position += place - 1
+
+print(f'\tEtage:\t{floor}\n\tPlace:\t{place}')
+print(f'Position in the sequence: {position}')
